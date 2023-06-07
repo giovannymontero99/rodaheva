@@ -23,6 +23,39 @@ body {
     font-family: 'Rubik', 'Teko', sans-serif;
 }
 
+input {
+    font-family: 'Rubik', 'Teko', sans-serif;
+    padding: .375rem .75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #a8a8a8b9;
+    height: 38px;
+    background-color: var(--color-letter);
+    width: 320px;
+    margin: .6rem 0;
+}
+
+input:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+textarea {
+    font-family: 'Rubik', 'Teko', sans-serif;
+    padding: .375rem .75rem;
+    border: 1px solid #a8a8a8b9;
+    border-radius: 4px;
+    resize: none;
+    width: 320px;
+    margin: .6rem 0;
+}
+
+textarea:focus {
+    border-color: #86b7fe;
+    outline: none;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
 li {
     list-style: none;
 }
@@ -312,7 +345,7 @@ a {
     * Servicios Styles
 */
 
-.servicios{
+.servicios {
     min-height: 100vh;
 }
 
@@ -360,7 +393,7 @@ a {
     flex-direction: column;
 }
 
-.portafolio-title{
+.portafolio-title {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 3rem;
@@ -400,7 +433,7 @@ a {
 }
 
 .portafolio-target-descripcion-container>p {
-    
+
     text-align: justify;
     margin: 1rem 0;
 }
@@ -443,8 +476,102 @@ a {
     font-size: 3rem;
     padding: 2rem;
 }
+
 .procesos>div>p {
     text-align: justify;
+}
+
+/*
+    * Tecnologias Styles
+*/
+
+.tecnologias {
+    padding: 7rem 0;
+    color: var(--color-letter);
+}
+
+.tecnologias-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.tecnologias-section {
+    background-color: #242434;
+    display: flex;
+    margin: 2rem auto;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    border-radius: 1rem;
+    width: 80%;
+    transition-duration: .5s;
+}
+
+.tecnologias-section>div {
+    flex: 1;
+}
+
+/*
+    * Blog Styles
+*/
+
+
+
+/*
+    * Contacto Styles
+*/
+.contacto {
+    padding: 7rem 0;
+    background-color: var(--color-letter);
+    color: var(--color-dark-body);
+    height: 100vh;
+}
+.contacto h6{
+    font-size: 1.6rem;
+    padding: 1.6rem ;
+}
+
+.contacto > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contacto input[type="button"]{
+    background-color: var(--color-dark-body);
+    color: var(--color-letter);
+    width: auto;
+    cursor: pointer;
+}
+
+
+/*
+    * Footer Styles
+*/
+
+.footer{
+    padding: 2rem 0;
+    color: var(--color-letter);
+}
+.footer-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: auto;
+    justify-items: center;
+    max-width: 80rem;
+}
+
+.footer img{
+    width:  clamp(36px,3vw,90px) ;
+}
+.footer-section> div{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 
@@ -666,7 +793,8 @@ a {
         margin: 2rem auto;
         height: auto;
     }
-    .portafolio-target{
+
+    .portafolio-target {
         width: 100%;
     }
 }
@@ -718,14 +846,32 @@ a {
     .procesos>div {
         height: auto
     }
-    .portafolio-proyectos{
+
+    .portafolio-proyectos {
         grid-template-columns: 1fr;
         max-width: 24rem;
         row-gap: 3rem;
     }
-    .portafolio-title{
+
+    .portafolio-title {
         font-size: 2rem;
     }
+
+    .tecnologias-section {
+        flex-direction: column;
+    }
+
+    .tecnologias-change-order>div:nth-child(1) {
+        order: 2;
+    }
+
+    .tecnologias-change-order>div:nth-child(2) {
+        order: 1;
+    }
+    .footer-section{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 320px) {
